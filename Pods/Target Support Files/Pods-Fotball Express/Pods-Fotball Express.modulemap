@@ -1,0 +1,6 @@
+framework module Pods_Fotball_Express {
+  umbrella header "Pods-Fotball Express-umbrella.h"
+
+  export *
+  module * { export * }
+}

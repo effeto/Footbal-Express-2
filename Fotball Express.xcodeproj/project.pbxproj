@@ -7,23 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		719EF728C3B598D17FA04DE2 /* Pods_Fotball_Express.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A2DB67762EAACCE915718B /* Pods_Fotball_Express.framework */; };
 		A5468FD62811F43200D604C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FD52811F43200D604C4 /* AppDelegate.swift */; };
 		A5468FD82811F43200D604C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FD72811F43200D604C4 /* SceneDelegate.swift */; };
-		A5468FDA2811F43200D604C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FD92811F43200D604C4 /* ViewController.swift */; };
-		A5468FDD2811F43200D604C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5468FDB2811F43200D604C4 /* Main.storyboard */; };
 		A5468FDF2811F43400D604C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5468FDE2811F43400D604C4 /* Assets.xcassets */; };
 		A5468FE22811F43400D604C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5468FE02811F43400D604C4 /* LaunchScreen.storyboard */; };
+		A5468FEB2811F51800D604C4 /* MatchesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FEA2811F51800D604C4 /* MatchesData.swift */; };
+		A5468FEE2811F54B00D604C4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FED2811F54B00D604C4 /* LoginView.swift */; };
+		A5468FF02811F57A00D604C4 /* SighnUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FEF2811F57A00D604C4 /* SighnUpView.swift */; };
+		A5468FF22811F5B600D604C4 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FF12811F5B600D604C4 /* MatchesView.swift */; };
+		A5468FF42811F5E000D604C4 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FF32811F5E000D604C4 /* MatchesTableViewCell.swift */; };
+		A5468FF62811F60000D604C4 /* MatchBidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FF52811F60000D604C4 /* MatchBidView.swift */; };
+		A5468FF92811F65300D604C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FF82811F65300D604C4 /* LoginViewController.swift */; };
+		A5468FFB2811F67D00D604C4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FFA2811F67D00D604C4 /* RegisterViewController.swift */; };
+		A5468FFD2811F6CB00D604C4 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FFC2811F6CB00D604C4 /* MatchesTableViewController.swift */; };
+		A5468FFF2811F70E00D604C4 /* MatchBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5468FFE2811F70E00D604C4 /* MatchBidViewController.swift */; };
+		A54690022811F77E00D604C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54690012811F77E00D604C4 /* Constants.swift */; };
+		A54690042811F81700D604C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A54690032811F81700D604C4 /* GoogleService-Info.plist */; };
+		A57C915A2811FBA4000F857A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91592811FBA4000F857A /* FirebaseAuth */; };
+		A57C915C2811FBA4000F857A /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A57C915B2811FBA4000F857A /* FirebaseAuthCombine-Community */; };
+		A57C915E2811FBA4000F857A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A57C915D2811FBA4000F857A /* FirebaseDatabase */; };
+		A57C91602811FBA4000F857A /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A57C915F2811FBA4000F857A /* FirebaseDatabaseSwift-Beta */; };
+		A57C91622811FBA4000F857A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91612811FBA4000F857A /* FirebaseFirestore */; };
+		A57C91642811FBA4000F857A /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91632811FBA4000F857A /* FirebaseFirestoreCombine-Community */; };
+		A57C91662811FBA4000F857A /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91652811FBA4000F857A /* FirebaseFirestoreSwift-Beta */; };
+		A57C91682811FBA4000F857A /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91672811FBA4000F857A /* FirebaseInstallations */; };
+		A57C916A2811FBA4000F857A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91692811FBA4000F857A /* FirebaseStorage */; };
+		A57C916C2811FBA4000F857A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A57C916B2811FBA4000F857A /* FirebaseStorageCombine-Community */; };
+		A57C916E2811FBA4000F857A /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A57C916D2811FBA4000F857A /* FirebaseStorageSwift-Beta */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47A2DB67762EAACCE915718B /* Pods_Fotball_Express.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fotball_Express.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		641483FD745FEB90C726760B /* Pods-Fotball Express.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotball Express.release.xcconfig"; path = "Target Support Files/Pods-Fotball Express/Pods-Fotball Express.release.xcconfig"; sourceTree = "<group>"; };
 		A5468FD22811F43200D604C4 /* Fotball Express.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fotball Express.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5468FD52811F43200D604C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5468FD72811F43200D604C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5468FD92811F43200D604C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5468FDC2811F43200D604C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5468FDE2811F43400D604C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5468FE12811F43400D604C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5468FE32811F43400D604C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5468FEA2811F51800D604C4 /* MatchesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesData.swift; sourceTree = "<group>"; };
+		A5468FED2811F54B00D604C4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A5468FEF2811F57A00D604C4 /* SighnUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SighnUpView.swift; sourceTree = "<group>"; };
+		A5468FF12811F5B600D604C4 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		A5468FF32811F5E000D604C4 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
+		A5468FF52811F60000D604C4 /* MatchBidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBidView.swift; sourceTree = "<group>"; };
+		A5468FF82811F65300D604C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5468FFA2811F67D00D604C4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A5468FFC2811F6CB00D604C4 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		A5468FFE2811F70E00D604C4 /* MatchBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBidViewController.swift; sourceTree = "<group>"; };
+		A54690012811F77E00D604C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A54690032811F81700D604C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9144192CFCBCB7B5900CBFD /* Pods-Fotball Express.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotball Express.debug.xcconfig"; path = "Target Support Files/Pods-Fotball Express/Pods-Fotball Express.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +66,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57C916C2811FBA4000F857A /* FirebaseStorageCombine-Community in Frameworks */,
+				A57C91602811FBA4000F857A /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				719EF728C3B598D17FA04DE2 /* Pods_Fotball_Express.framework in Frameworks */,
+				A57C915C2811FBA4000F857A /* FirebaseAuthCombine-Community in Frameworks */,
+				A57C916A2811FBA4000F857A /* FirebaseStorage in Frameworks */,
+				A57C916E2811FBA4000F857A /* FirebaseStorageSwift-Beta in Frameworks */,
+				A57C91682811FBA4000F857A /* FirebaseInstallations in Frameworks */,
+				A57C915E2811FBA4000F857A /* FirebaseDatabase in Frameworks */,
+				A57C915A2811FBA4000F857A /* FirebaseAuth in Frameworks */,
+				A57C91662811FBA4000F857A /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				A57C91622811FBA4000F857A /* FirebaseFirestore in Frameworks */,
+				A57C91642811FBA4000F857A /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		235B0FF5146B7F8C20CF572C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9144192CFCBCB7B5900CBFD /* Pods-Fotball Express.debug.xcconfig */,
+				641483FD745FEB90C726760B /* Pods-Fotball Express.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5468FC92811F43200D604C4 = {
 			isa = PBXGroup;
 			children = (
 				A5468FD42811F43200D604C4 /* Fotball Express */,
 				A5468FD32811F43200D604C4 /* Products */,
+				235B0FF5146B7F8C20CF572C /* Pods */,
+				AAC14ECE63EFDB35AC4CFB32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +114,65 @@
 		A5468FD42811F43200D604C4 /* Fotball Express */ = {
 			isa = PBXGroup;
 			children = (
-				A5468FD52811F43200D604C4 /* AppDelegate.swift */,
-				A5468FD72811F43200D604C4 /* SceneDelegate.swift */,
-				A5468FD92811F43200D604C4 /* ViewController.swift */,
-				A5468FDB2811F43200D604C4 /* Main.storyboard */,
-				A5468FDE2811F43400D604C4 /* Assets.xcassets */,
-				A5468FE02811F43400D604C4 /* LaunchScreen.storyboard */,
+				A54690002811F73400D604C4 /* Extra */,
+				A5468FE92811F4F500D604C4 /* Model */,
+				A5468FEC2811F53B00D604C4 /* View */,
+				A5468FF72811F61A00D604C4 /* Controller */,
 				A5468FE32811F43400D604C4 /* Info.plist */,
+				A54690032811F81700D604C4 /* GoogleService-Info.plist */,
 			);
 			path = "Fotball Express";
+			sourceTree = "<group>";
+		};
+		A5468FE92811F4F500D604C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5468FEA2811F51800D604C4 /* MatchesData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5468FEC2811F53B00D604C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5468FED2811F54B00D604C4 /* LoginView.swift */,
+				A5468FEF2811F57A00D604C4 /* SighnUpView.swift */,
+				A5468FF12811F5B600D604C4 /* MatchesView.swift */,
+				A5468FF32811F5E000D604C4 /* MatchesTableViewCell.swift */,
+				A5468FF52811F60000D604C4 /* MatchBidView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5468FF72811F61A00D604C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5468FF82811F65300D604C4 /* LoginViewController.swift */,
+				A5468FFA2811F67D00D604C4 /* RegisterViewController.swift */,
+				A5468FFC2811F6CB00D604C4 /* MatchesTableViewController.swift */,
+				A5468FFE2811F70E00D604C4 /* MatchBidViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A54690002811F73400D604C4 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				A5468FD52811F43200D604C4 /* AppDelegate.swift */,
+				A5468FD72811F43200D604C4 /* SceneDelegate.swift */,
+				A5468FDE2811F43400D604C4 /* Assets.xcassets */,
+				A5468FE02811F43400D604C4 /* LaunchScreen.storyboard */,
+				A54690012811F77E00D604C4 /* Constants.swift */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		AAC14ECE63EFDB35AC4CFB32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47A2DB67762EAACCE915718B /* Pods_Fotball_Express.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +182,30 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5468FE62811F43400D604C4 /* Build configuration list for PBXNativeTarget "Fotball Express" */;
 			buildPhases = (
+				1FEA8FE8C512D6121D183552 /* [CP] Check Pods Manifest.lock */,
 				A5468FCE2811F43200D604C4 /* Sources */,
 				A5468FCF2811F43200D604C4 /* Frameworks */,
 				A5468FD02811F43200D604C4 /* Resources */,
+				B5877F3A7F6C8942416C8B69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Fotball Express";
+			packageProductDependencies = (
+				A57C91592811FBA4000F857A /* FirebaseAuth */,
+				A57C915B2811FBA4000F857A /* FirebaseAuthCombine-Community */,
+				A57C915D2811FBA4000F857A /* FirebaseDatabase */,
+				A57C915F2811FBA4000F857A /* FirebaseDatabaseSwift-Beta */,
+				A57C91612811FBA4000F857A /* FirebaseFirestore */,
+				A57C91632811FBA4000F857A /* FirebaseFirestoreCombine-Community */,
+				A57C91652811FBA4000F857A /* FirebaseFirestoreSwift-Beta */,
+				A57C91672811FBA4000F857A /* FirebaseInstallations */,
+				A57C91692811FBA4000F857A /* FirebaseStorage */,
+				A57C916B2811FBA4000F857A /* FirebaseStorageCombine-Community */,
+				A57C916D2811FBA4000F857A /* FirebaseStorageSwift-Beta */,
+			);
 			productName = "Fotball Express";
 			productReference = A5468FD22811F43200D604C4 /* Fotball Express.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +234,9 @@
 				Base,
 			);
 			mainGroup = A5468FC92811F43200D604C4;
+			packageReferences = (
+				A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = A5468FD32811F43200D604C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,34 +253,78 @@
 			files = (
 				A5468FE22811F43400D604C4 /* LaunchScreen.storyboard in Resources */,
 				A5468FDF2811F43400D604C4 /* Assets.xcassets in Resources */,
-				A5468FDD2811F43200D604C4 /* Main.storyboard in Resources */,
+				A54690042811F81700D604C4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FEA8FE8C512D6121D183552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fotball Express-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5877F3A7F6C8942416C8B69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fotball Express/Pods-Fotball Express-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fotball Express/Pods-Fotball Express-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fotball Express/Pods-Fotball Express-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5468FCE2811F43200D604C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5468FDA2811F43200D604C4 /* ViewController.swift in Sources */,
+				A5468FF62811F60000D604C4 /* MatchBidView.swift in Sources */,
+				A5468FFB2811F67D00D604C4 /* RegisterViewController.swift in Sources */,
+				A5468FFD2811F6CB00D604C4 /* MatchesTableViewController.swift in Sources */,
+				A5468FFF2811F70E00D604C4 /* MatchBidViewController.swift in Sources */,
+				A5468FF22811F5B600D604C4 /* MatchesView.swift in Sources */,
 				A5468FD62811F43200D604C4 /* AppDelegate.swift in Sources */,
 				A5468FD82811F43200D604C4 /* SceneDelegate.swift in Sources */,
+				A54690022811F77E00D604C4 /* Constants.swift in Sources */,
+				A5468FF02811F57A00D604C4 /* SighnUpView.swift in Sources */,
+				A5468FF42811F5E000D604C4 /* MatchesTableViewCell.swift in Sources */,
+				A5468FEE2811F54B00D604C4 /* LoginView.swift in Sources */,
+				A5468FF92811F65300D604C4 /* LoginViewController.swift in Sources */,
+				A5468FEB2811F51800D604C4 /* MatchesData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A5468FDB2811F43200D604C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5468FDC2811F43200D604C4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A5468FE02811F43400D604C4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +452,7 @@
 		};
 		A5468FE72811F43400D604C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9144192CFCBCB7B5900CBFD /* Pods-Fotball Express.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +463,7 @@
 				INFOPLIST_FILE = "Fotball Express/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,12 +475,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A5468FE82811F43400D604C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 641483FD745FEB90C726760B /* Pods-Fotball Express.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +492,7 @@
 				INFOPLIST_FILE = "Fotball Express/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +530,75 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A57C91592811FBA4000F857A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A57C915B2811FBA4000F857A /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		A57C915D2811FBA4000F857A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		A57C915F2811FBA4000F857A /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		A57C91612811FBA4000F857A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A57C91632811FBA4000F857A /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		A57C91652811FBA4000F857A /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		A57C91672811FBA4000F857A /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		A57C91692811FBA4000F857A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		A57C916B2811FBA4000F857A /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		A57C916D2811FBA4000F857A /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A57C91582811FBA4000F857A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5468FCA2811F43200D604C4 /* Project object */;
 }
