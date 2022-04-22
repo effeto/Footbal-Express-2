@@ -9,7 +9,6 @@ import UIKit
 
 class MatchBidView: UIView {
 
-    var oneHundredBtnAction:(() -> Void)?
     
     var team1name = ""
     var team2name = ""

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class MatchBidViewController: UIViewController {
 
     let constants = Constants()
     var matchBidView = MatchBidView()
     let mainVc = MatchesTableViewController()
+    let storage = Storage.storage()
     
     let team1ImageView = UIImageView()
     let team2ImageView = UIImageView()
@@ -76,7 +78,20 @@ class MatchBidViewController: UIViewController {
 
 extension MatchBidViewController{
     func setImageViewOne() {
-        team1ImageView.image = team1Image
+        let path1Rf = storage.reference(withPath: "\(team1name).png")
+        path1Rf.getData(maxSize:1 * 1024 * 1024) { data, error in
+          if let error = error {
+              self.team1ImageView.image  = UIImage(named: Constants().noImage)!
+              print(error.localizedDescription)
+          } else {
+            // Data for "images/island.jpg" is returned
+            
+            let image = UIImage(data: data!)
+              self.team1ImageView.image  = image!
+          }
+        }
+        
+//        team1ImageView.image = team1Image
         team1ImageView.translatesAutoresizingMaskIntoConstraints = false
         team1ImageView.backgroundColor = constants.colorWhenSelected
         team1ImageView.layer.cornerRadius = 10
@@ -89,7 +104,18 @@ extension MatchBidViewController{
     }
     
     func setImageViewTwo() {
-        team2ImageView.image = team2Image
+        let path2Rf = storage.reference(withPath: "\(team2name).png")
+        path2Rf.getData(maxSize:1 * 1024 * 1024) { data, error in
+          if let error = error {
+              self.team2ImageView.image  = UIImage(named: Constants().noImage)!
+              print(error.localizedDescription)
+          } else {
+            // Data for "images/island.jpg" is returned
+            
+            let image = UIImage(data: data!)
+              self.team2ImageView.image  = image!
+          }
+        }
         team2ImageView.translatesAutoresizingMaskIntoConstraints = false
         team2ImageView.backgroundColor = constants.colorWhenSelected
         team2ImageView.layer.cornerRadius = 10

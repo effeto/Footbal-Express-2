@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 
 struct Matches {
-    let odd1: Double
-    let odd2: Double
-    let team1: String
-    let team2: String
+    let id: String
+    let team1name: String
+    let team2name: String
+    let team1odd: Double
+    let team2odd: Double
     let team1Image: UIImage?
     let team2Image: UIImage?
     

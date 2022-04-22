@@ -54,6 +54,7 @@ class LoginView: UIView {
         login.backgroundColor = .systemGray
         login.translatesAutoresizingMaskIntoConstraints = false
         login.placeholder = "Login"
+        login.text = "1@2.com"
         login.textAlignment = .center
         login.layer.cornerRadius = 10
         login.keyboardType = .emailAddress
@@ -69,6 +70,7 @@ class LoginView: UIView {
         password.backgroundColor = .systemGray
         password.translatesAutoresizingMaskIntoConstraints = false
         password.placeholder = "Password"
+        password.text = "123456"
         password.textAlignment = .center
         password.layer.cornerRadius = 10
         password.keyboardType = .alphabet
