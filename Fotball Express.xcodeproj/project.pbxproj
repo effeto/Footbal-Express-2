@@ -161,8 +161,8 @@
 				A5468FF82811F65300D604C4 /* LoginViewController.swift */,
 				A5468FFA2811F67D00D604C4 /* RegisterViewController.swift */,
 				A5468FFC2811F6CB00D604C4 /* MatchesTableViewController.swift */,
-				A57C9175281578C6000F857A /* MyBidsViewController.swift */,
 				A5468FFE2811F70E00D604C4 /* MatchBidViewController.swift */,
+				A57C9175281578C6000F857A /* MyBidsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

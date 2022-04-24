@@ -361,7 +361,7 @@ extension MatchBidViewController{
     }
     
     @objc func twoHudredBtnTapped() {
-        if twoHundredBtn.isSelected {
+        if twoHundredBtn.isEnabled {
             bidsChoice(butt1: twoHundredBtn, butt2: oneHundredBtn, butt3: fiftyBtn)
             selectedBid = 200.0
             print(selectedBid)
