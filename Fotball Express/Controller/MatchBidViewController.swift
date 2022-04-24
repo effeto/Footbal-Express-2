@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 class MatchBidViewController: UIViewController {
-
+    
     let constants = Constants()
     var matchBidView = MatchBidView()
     let mainVc = MatchesTableViewController()
@@ -42,7 +42,10 @@ class MatchBidViewController: UIViewController {
     var team1Odd = 0.0
     var team2Odd = 0.0
     let oddTitle = "  Odds: "
-    
+    let deafaultWinLAbelTxt = "Select a team and make a bid first"
+    var selectedTeam = ""
+    var selectedOdds = 0.0
+    var selectedBid = 0.0
     
     
     
@@ -80,18 +83,18 @@ extension MatchBidViewController{
     func setImageViewOne() {
         let path1Rf = storage.reference(withPath: "\(team1name).png")
         path1Rf.getData(maxSize:1 * 1024 * 1024) { data, error in
-          if let error = error {
-              self.team1ImageView.image  = UIImage(named: Constants().noImage)!
-              print(error.localizedDescription)
-          } else {
-            // Data for "images/island.jpg" is returned
-            
-            let image = UIImage(data: data!)
-              self.team1ImageView.image  = image!
-          }
+            if let error = error {
+                self.team1ImageView.image  = UIImage(named: Constants().noImage)!
+                print(error.localizedDescription)
+            } else {
+                // Data for "images/island.jpg" is returned
+                
+                let image = UIImage(data: data!)
+                self.team1ImageView.image  = image!
+            }
         }
         
-//        team1ImageView.image = team1Image
+        //        team1ImageView.image = team1Image
         team1ImageView.translatesAutoresizingMaskIntoConstraints = false
         team1ImageView.backgroundColor = constants.colorWhenSelected
         team1ImageView.layer.cornerRadius = 10
@@ -106,15 +109,15 @@ extension MatchBidViewController{
     func setImageViewTwo() {
         let path2Rf = storage.reference(withPath: "\(team2name).png")
         path2Rf.getData(maxSize:1 * 1024 * 1024) { data, error in
-          if let error = error {
-              self.team2ImageView.image  = UIImage(named: Constants().noImage)!
-              print(error.localizedDescription)
-          } else {
-            // Data for "images/island.jpg" is returned
-            
-            let image = UIImage(data: data!)
-              self.team2ImageView.image  = image!
-          }
+            if let error = error {
+                self.team2ImageView.image  = UIImage(named: Constants().noImage)!
+                print(error.localizedDescription)
+            } else {
+                // Data for "images/island.jpg" is returned
+                
+                let image = UIImage(data: data!)
+                self.team2ImageView.image  = image!
+            }
         }
         team2ImageView.translatesAutoresizingMaskIntoConstraints = false
         team2ImageView.backgroundColor = constants.colorWhenSelected
@@ -295,21 +298,22 @@ extension MatchBidViewController{
         
     }
     func setWinLabel() {
-        winLabel.text = "Select a team and make a bid first"
+        winLabel.text = deafaultWinLAbelTxt
         winLabel.backgroundColor = constants.cellColor
         winLabel.layer.cornerRadius = 10
         winLabel.lineBreakMode = .byWordWrapping
         winLabel.textAlignment = .center
         winLabel.textColor = .white
         winLabel.translatesAutoresizingMaskIntoConstraints = false
+        winLabel.numberOfLines = 0
         
         
         view.addSubview(winLabel)
         
         winLabel.topAnchor.constraint(equalTo: oddLabel.bottomAnchor, constant: 10).isActive = true
+        winLabel.bottomAnchor.constraint(equalTo: makeBidBtn.topAnchor, constant: -10).isActive = true
         winLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25).isActive = true
         winLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25).isActive = true
-        winLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
     }
 }
 
@@ -319,23 +323,49 @@ extension MatchBidViewController{
 extension MatchBidViewController{
     @objc func team1BtnPresed() {
         teamChoice(butt1: selectTeam1Btn, butt2: selectTeam2Btn)
+        if selectTeam1Btn.isSelected {
+            selectedTeam = team1name
+            selectedOdds = team1Odd
+            print(selectedTeam)
+        }
     }
     
     @objc func team2BtnPressed() {
         teamChoice(butt1: selectTeam2Btn, butt2: selectTeam1Btn)
+        if selectTeam2Btn.isSelected {
+            selectedTeam = team2name
+            selectedOdds = team2Odd
+            print(selectedTeam)
+            
+        }
     }
     
     
     @objc func fiftydBtnTapped() {
         bidsChoice(butt1: fiftyBtn, butt2: oneHundredBtn, butt3: twoHundredBtn)
+        if fiftyBtn.isSelected {
+            selectedBid = 50.0
+            print(selectedBid)
+        }
+        
     }
     
     @objc func onehudredBtnTapped() {
         bidsChoice(butt1: oneHundredBtn, butt2: twoHundredBtn, butt3: fiftyBtn)
+        if oneHundredBtn.isSelected {
+            selectedBid = 100.0
+            print(selectedBid)
+            
+        }
     }
     
     @objc func twoHudredBtnTapped() {
         bidsChoice(butt1: twoHundredBtn, butt2: oneHundredBtn, butt3: fiftyBtn)
+        if twoHundredBtn.isSelected {
+            selectedBid = 200.0
+            print(selectedBid)
+            
+        }
     }
     
     @objc func makeBidTapped() {
@@ -381,16 +411,23 @@ extension MatchBidViewController{
                 if let _ = butt1.currentTitle{
                     bid = butt1.currentTitle!
                     oddLabel.text = bid
+                    
+                    
                 }
+                winMath(odd: selectedOdds, bid: selectedBid)
                 butt2.isEnabled = false
                 butt3.isEnabled = false
                 textLabel.isEnabled = false
+                print("Sum: \(winMath(odd: selectedOdds, bid: selectedBid))")
             }else {
                 butt1.backgroundColor = .gray
                 oddLabel.text = "Select a bid first"
                 butt2.isEnabled = true
                 butt3.isEnabled = true
                 textLabel.isEnabled = true
+                makeBidBtn.backgroundColor = .gray
+                makeBidBtn.isEnabled = false
+                winLabel.text = deafaultWinLAbelTxt
             }
         }
     }
@@ -407,20 +444,36 @@ extension MatchBidViewController: UITextFieldDelegate {
         if let _ = textLabel.text {
             bid = textLabel.text!
             oddLabel.text =  "Your bid: " + bid
+            selectedBid = Double(bid) ?? 0.0
             fiftyBtn.isEnabled = false
             oneHundredBtn.isEnabled = false
             twoHundredBtn.isEnabled = false
+            winMath(odd: selectedOdds, bid: selectedBid)
+            print("Sum: \(winMath(odd: selectedOdds, bid: selectedBid))")
+            print(selectedBid)
+            
         }
         if textLabel.text == "" {
             fiftyBtn.isEnabled = true
             oneHundredBtn.isEnabled = true
             twoHundredBtn.isEnabled = true
             oddLabel.text = "Make a bid first"
+            print(selectedBid)
+            makeBidBtn.backgroundColor = .gray
+            makeBidBtn.isEnabled = false
+            winLabel.text = deafaultWinLAbelTxt
         }
     }
     
-    @objc func sentToWinTabel() {
-        
+    @objc func sentToWinTable() {
+        print("WORKING")
     }
-
+    
+    func winMath (odd: Double, bid: Double ) -> Double {
+            let sum = odd * bid
+            makeBidBtn.backgroundColor = constants.colorWhenSelected
+            makeBidBtn.isEnabled = true
+            winLabel.text = "If \(selectedTeam) win, you wil earn \(sum)$"
+            return sum
+    }
 }
