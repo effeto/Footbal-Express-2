@@ -14,6 +14,8 @@ class MatchBidViewController: UIViewController {
     var matchBidView = MatchBidView()
     let mainVc = MatchesTableViewController()
     let storage = Storage.storage()
+    var ref: DocumentReference? = nil
+    let db = Firestore.firestore()
     
     let team1ImageView = UIImageView()
     let team2ImageView = UIImageView()
@@ -46,6 +48,7 @@ class MatchBidViewController: UIViewController {
     var selectedTeam = ""
     var selectedOdds = 0.0
     var selectedBid = 0.0
+    var earnSum = 0.0
     
     
     
@@ -87,8 +90,6 @@ extension MatchBidViewController{
                 self.team1ImageView.image  = UIImage(named: Constants().noImage)!
                 print(error.localizedDescription)
             } else {
-                // Data for "images/island.jpg" is returned
-                
                 let image = UIImage(data: data!)
                 self.team1ImageView.image  = image!
             }
@@ -360,8 +361,8 @@ extension MatchBidViewController{
     }
     
     @objc func twoHudredBtnTapped() {
-        bidsChoice(butt1: twoHundredBtn, butt2: oneHundredBtn, butt3: fiftyBtn)
         if twoHundredBtn.isSelected {
+            bidsChoice(butt1: twoHundredBtn, butt2: oneHundredBtn, butt3: fiftyBtn)
             selectedBid = 200.0
             print(selectedBid)
             
@@ -369,7 +370,18 @@ extension MatchBidViewController{
     }
     
     @objc func makeBidTapped() {
-        print("WORKING")
+        ref = db.collection("userBids").addDocument(data: [
+            "selectedTeam": selectedTeam,
+            "selectedBid":selectedBid,
+            "selectedOdds": selectedOdds,
+            "earnSum": earnSum
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
     }
     
     func teamChoice(butt1:UIButton, butt2: UIButton) {
@@ -411,10 +423,10 @@ extension MatchBidViewController{
                 if let _ = butt1.currentTitle{
                     bid = butt1.currentTitle!
                     oddLabel.text = bid
-                    
-                    
                 }
-                winMath(odd: selectedOdds, bid: selectedBid)
+                earnSum = winMath(odd: selectedOdds, bid: selectedBid)
+                makeBidBtn.backgroundColor = constants.colorWhenSelected
+                makeBidBtn.isEnabled = true
                 butt2.isEnabled = false
                 butt3.isEnabled = false
                 textLabel.isEnabled = false
@@ -448,7 +460,10 @@ extension MatchBidViewController: UITextFieldDelegate {
             fiftyBtn.isEnabled = false
             oneHundredBtn.isEnabled = false
             twoHundredBtn.isEnabled = false
-            winMath(odd: selectedOdds, bid: selectedBid)
+            earnSum = winMath(odd: selectedOdds, bid: selectedBid)
+            makeBidBtn.backgroundColor = constants.colorWhenSelected
+            makeBidBtn.isEnabled = true
+            
             print("Sum: \(winMath(odd: selectedOdds, bid: selectedBid))")
             print(selectedBid)
             
@@ -466,13 +481,15 @@ extension MatchBidViewController: UITextFieldDelegate {
     }
     
     @objc func sentToWinTable() {
-        print("WORKING")
+        
+
+       
+        
     }
     
     func winMath (odd: Double, bid: Double ) -> Double {
             let sum = odd * bid
-            makeBidBtn.backgroundColor = constants.colorWhenSelected
-            makeBidBtn.isEnabled = true
+
             winLabel.text = "If \(selectedTeam) win, you wil earn \(sum)$"
             return sum
     }

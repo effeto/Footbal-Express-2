@@ -10,6 +10,7 @@ import UIKit
 class Constants{
 
 public let matchesCellIdentifier = "MatchesTableViewCell"
+public let myBidsIndentifier = "MyBidTableViewCell"
 
 //colors
 public let viewBackgroundColor: UIColor = #colorLiteral(red: 0.1999999881, green: 0.1999999881, blue: 0.1999999881, alpha: 1)

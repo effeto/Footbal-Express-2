@@ -15,10 +15,6 @@ class MatchesTableViewController: UIViewController {
     var matchesView = MatchesView()
     let storage = Storage.storage()
     
-    
-    
-    
-    
     var matchesTable = UITableView()
     var matches:[Matches] = []
     
@@ -74,9 +70,6 @@ extension MatchesTableViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let bidVC = MatchBidViewController()
-
-//        bidVC.team1Image = matches[indexPath.row].team1Image ??  UIImage(named: Constants().noImage)!
-
         bidVC.team2Image = matches[indexPath.row].team2Image ??  UIImage(named: Constants().noImage)!
         bidVC.team1name = matches[indexPath.row].team1name
         bidVC.team2name = matches[indexPath.row].team2name
@@ -131,7 +124,9 @@ extension MatchesTableViewController {
         }
         
         @objc private func goToMyBids() {
-            
+            let mybidsVC = MyBidsViewController()
+            self.navigationController?.pushViewController(mybidsVC, animated: true)
+            mybidsVC.modalPresentationStyle = .currentContext
         }
         
     }

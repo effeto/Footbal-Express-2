@@ -1,13 +1,13 @@
 //
-//  MatchesView.swift
+//  MyBidsView.swift
 //  Fotball Express
 //
-//  Created by Демьян on 21.04.2022.
+//  Created by Демьян on 24.04.2022.
 //
 
 import UIKit
 
-class MatchesView: UIView {
+class MyBidsView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,17 +19,18 @@ class MatchesView: UIView {
     
     func setView() {
         backgroundColor = Constants().viewBackgroundColor
-        addSubview(matchesTable)
+        addSubview(myBidsTable)
         setTableView()
     }
     
-    let matchesTable:UITableView = {
+    let myBidsTable:UITableView = {
         let tableView = UITableView()
         
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .red
         tableView.automaticallyAdjustsScrollIndicatorInsets = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(MatchesTableViewCell.self, forCellReuseIdentifier: Constants().matchesCellIdentifier)
+        tableView.rowHeight = 75
+        tableView.register(MyBidTableViewCell.self, forCellReuseIdentifier: Constants().myBidsIndentifier)
         tableView.backgroundColor = Constants().viewBackgroundColor
         
         
@@ -39,12 +40,10 @@ class MatchesView: UIView {
     }()
     
     func setTableView() {
-        matchesTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        matchesTable.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        matchesTable.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        matchesTable.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        myBidsTable.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        myBidsTable.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        myBidsTable.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        myBidsTable.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
     }
-    
+
 }
-
-

@@ -35,6 +35,10 @@
 		A57C916A2811FBA4000F857A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A57C91692811FBA4000F857A /* FirebaseStorage */; };
 		A57C916C2811FBA4000F857A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A57C916B2811FBA4000F857A /* FirebaseStorageCombine-Community */; };
 		A57C916E2811FBA4000F857A /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A57C916D2811FBA4000F857A /* FirebaseStorageSwift-Beta */; };
+		A57C91742815786B000F857A /* MyBidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57C91732815786B000F857A /* MyBidsView.swift */; };
+		A57C9176281578C6000F857A /* MyBidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57C9175281578C6000F857A /* MyBidsViewController.swift */; };
+		A57C917828157986000F857A /* MyBids.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57C917728157986000F857A /* MyBids.swift */; };
+		A57C917A28159AC4000F857A /* MyBidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57C917928159AC3000F857A /* MyBidTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		A5468FFE2811F70E00D604C4 /* MatchBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBidViewController.swift; sourceTree = "<group>"; };
 		A54690012811F77E00D604C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A54690032811F81700D604C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A57C91732815786B000F857A /* MyBidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidsView.swift; sourceTree = "<group>"; };
+		A57C9175281578C6000F857A /* MyBidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidsViewController.swift; sourceTree = "<group>"; };
+		A57C917728157986000F857A /* MyBids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBids.swift; sourceTree = "<group>"; };
+		A57C917928159AC3000F857A /* MyBidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidTableViewCell.swift; sourceTree = "<group>"; };
 		A9144192CFCBCB7B5900CBFD /* Pods-Fotball Express.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fotball Express.debug.xcconfig"; path = "Target Support Files/Pods-Fotball Express/Pods-Fotball Express.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				A5468FEA2811F51800D604C4 /* MatchesData.swift */,
+				A57C917728157986000F857A /* MyBids.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +148,8 @@
 				A5468FEF2811F57A00D604C4 /* SighnUpView.swift */,
 				A5468FF12811F5B600D604C4 /* MatchesView.swift */,
 				A5468FF32811F5E000D604C4 /* MatchesTableViewCell.swift */,
+				A57C917928159AC3000F857A /* MyBidTableViewCell.swift */,
+				A57C91732815786B000F857A /* MyBidsView.swift */,
 				A5468FF52811F60000D604C4 /* MatchBidView.swift */,
 			);
 			path = View;
@@ -150,6 +161,7 @@
 				A5468FF82811F65300D604C4 /* LoginViewController.swift */,
 				A5468FFA2811F67D00D604C4 /* RegisterViewController.swift */,
 				A5468FFC2811F6CB00D604C4 /* MatchesTableViewController.swift */,
+				A57C9175281578C6000F857A /* MyBidsViewController.swift */,
 				A5468FFE2811F70E00D604C4 /* MatchBidViewController.swift */,
 			);
 			path = Controller;
@@ -308,10 +320,13 @@
 			files = (
 				A5468FF62811F60000D604C4 /* MatchBidView.swift in Sources */,
 				A5468FFB2811F67D00D604C4 /* RegisterViewController.swift in Sources */,
+				A57C917A28159AC4000F857A /* MyBidTableViewCell.swift in Sources */,
 				A5468FFD2811F6CB00D604C4 /* MatchesTableViewController.swift in Sources */,
 				A5468FFF2811F70E00D604C4 /* MatchBidViewController.swift in Sources */,
+				A57C91742815786B000F857A /* MyBidsView.swift in Sources */,
 				A5468FF22811F5B600D604C4 /* MatchesView.swift in Sources */,
 				A5468FD62811F43200D604C4 /* AppDelegate.swift in Sources */,
+				A57C9176281578C6000F857A /* MyBidsViewController.swift in Sources */,
 				A5468FD82811F43200D604C4 /* SceneDelegate.swift in Sources */,
 				A54690022811F77E00D604C4 /* Constants.swift in Sources */,
 				A5468FF02811F57A00D604C4 /* SighnUpView.swift in Sources */,
@@ -319,6 +334,7 @@
 				A5468FEE2811F54B00D604C4 /* LoginView.swift in Sources */,
 				A5468FF92811F65300D604C4 /* LoginViewController.swift in Sources */,
 				A5468FEB2811F51800D604C4 /* MatchesData.swift in Sources */,
+				A57C917828157986000F857A /* MyBids.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
